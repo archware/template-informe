@@ -1,0 +1,90 @@
+\chapter{INSTALACIÓN}
+	
+	\LaTeX\ no es un programa por sí mismo; se trata de un idioma. El uso de \LaTeX\ requiere un montón de herramientas. La adquisición manualmente resultaría en la descarga y la instalación de varios programas a fin de tener un sistema de ordenador adecuado que se puede utilizar para crear una salida látex, tales como archivos PDF. \TeX\ Distribuciones de ayudar al usuario de esta manera, en que se trata de un único proceso de instalación paso que ofrece (casi) todo.
+	
+	Como mínimo, necesitará una distribución \TeX, un buen editor de texto y un visor DVI o PDF. Más específicamente, el requisito básico es tener un compilador \TeX\ (que se utiliza para generar archivos de salida de la fuente), las fuentes, y el latex macro conjunto. Instalaciones opcionales y recomendadas incluyen un editor de su preferencia para escribir documentos fuente \LaTeX\ (esto es, probablemente, donde pasará la mayor parte de su tiempo), y un programa de gestión bibliográfica para gestionar las referencias si se los usa con frecuencia.
+	
+	\section{GNU / Linux}
+		
+%		Recodará que \LaTeX\ era un conjunto de macros de \TeX. Pues bien, \LaTeX\ no es el único; existen otros paquetes de macros como \ConTeXt, \XeTeX, \LuaTeX, \AMSTeX, teTeX, etre otras, que nacieron en su momento con un propósito similar a \LaTeX\ sólo que por diferentes organizaciones y personas. En todas el corazón \TeX\ late fuerte y ninguna se disputa el título de ``ser mejor que''. De hecho todas son excelentes e incluso se complementan. Lo que sí no sobra decir, es que de todas, la más usada es \LaTeX.
+%		
+%		Ahora bien, \LaTeX a su vez cuenta con versiones derivadas o distribuciones cuyo propósito inicial era en realidad soportarse en plataformas específicas y ayudar con el asunto de la administración de paquetes: \TeX Live\ para GNU/Linux, \MiKTeX para Windows, MacTeX (adivinen para quién), etc. Pero hoy de hecho puede instalarse \TeX Live\ en Windows y \MiKTeX en GNU/Linux.
+
+		En el pasado, la distribución más común solía ser teTeX . En mayo de 2006 se teTeX Ya no es mantenido de forma activa y su antiguo mantenedor Thomas Esser recomienda \TeXLive\ como su reemplazo.
+		
+		La manera más fácil de conseguir \TeX Live\ es utilizar el gestor de paquetes viene con su sistema operativo. Por lo general se trata como varios paquetes, con algunos de ellos siendo esencial, otra opcional. Las núcleo de paquetes \TeX Live 
+		
+		Instalación en Ubuntu y derivados
+		
+		sudo apt-get install texlive
+		(es una versión compacta)
+		
+		ó
+		
+		sudo apt-get install texlive-full
+		(para tenerlo con todos los paquetes soportados por la comunidad \TeX Live)
+		
+		Instalación en Fedora
+		
+		yum install texlive
+		
+		Es posible que desee instalar el contenido de \TeX Live\ de forma más selectiva. Véase a continuación .
+		
+	\section{Mac OS X}
+		Los usuarios de Mac OS X pueden usar MacTeX , una distribución basada en TeX Live apoyo \TeX, \LaTeX, \AMSTeX, el contexto, \XeTeX y muchos otros paquetes centrales. Descargar MacTeX.mpkg. en la página MacTeX , descomprimirlo y siga las instrucciones. Información adicional para los usuarios de Mac OS X se puede encontrar en la \TeX\ en Mac OS X Wiki.
+		
+		Dado que el Mac OS X también es un sistema basado en Unix, \TeXLive es, naturalmente, disponible a través de MacPorts y Fink . Homebrew los usuarios deben utilizar el funcionario instalador MacTeX debido a la estructura de directorios exclusivo utilizado por TeX Live . Información adicional para los usuarios de Mac OS X se puede encontrar en la TeX en Mac OS X Wiki .
+	
+	\section{Microsoft Windows}
+	
+		Los usuarios de Microsoft Windows pueden instalar \MiKTeX\ en su ordenador. Cuenta con un instalador fácil que se encarga de la configuración del entorno y la descarga de los paquetes principales. Esta distribución tiene características avanzadas, tales como la instalación automática de paquetes, e interfaces sencillas para modificar la configuración, tales como tamaños de papel predeterminado.
+		
+		También hay un instalador de \TeXLive\ disponible para Windows.
+		
+	\section{EDITORES}
+		
+		\subsection{¿Y en qué escribo?}
+		
+		Llega el asunto que para algunos resulta más delicado. El editor \LaTeX\ que se escoja será la navaja suiza del usuario texista, con la que interactuará a la vez que sacará el mayor provecho de todo el potencial de \LaTeX.
+		
+		Hay muchos, y de hecho, editar un archivo de \LaTeX\ es algo que puede hacerse con cualquier editor de texto plano. Pero llamamos editores sólo a aquellos que proporcionan las herramientas apropiadas para hacer todo lo necesario con nuestra distribución \LaTeX.
+		
+		En general las características de los editores son muy similares. Se diferencian básicamente en el grado de ayuda al usuario, esto es, qué tanto ayudan con el código, los símbolos y otros. He aquí algunos:
+		
+		\begin{description}
+			\item[Texmaker (http://www.xm1math.net/texmaker/)] \hfill \\
+			Es muy completo, con una interfaz limpia y amigable, posee asistentes y autocompleta los comandos, es fácilmente configurable y personalizable.
+			\item[Kile (http://kile.sourceforge.net/)] \hfill \\
+			Si tu entorno es KDE tal vez te interese Kile. Sencillo y muy completo. Posee un gran número de usuarios felices.
+			\item[LaTeXila (http://projects.gnome.org/latexila/)] \hfill \\
+			Un entorno de trabajo LaTeX pero diseñado para integrarse a Gnome. Sencillo y completo.
+			\item[TeXworks (http://www.tug.org/texworks/)] \hfill \\
+			Muy potente pero poco amigable con el usuario. Es desarrollado por TUG (\TeX\ Users Group, la organización eje del desarrollo de \TeX).
+			\item[Gummi (http://dev.midnightcoding.org/projects/gummi)] \hfill \\
+			Es un editor sencillo que vale la pena considerar. No es muy potente pero tiene una característica interesante: el resultado de lo que se edita se puede observar en tiempo en .pdf en una ventana lateral.
+			\item[TeXstudio (http://texstudio.sourceforge.net/)] \hfill \\
+			Es un editor basado en TeXmaker y cada día gana más adeptos. Es un TeXmaker con esteroides.
+			\item[LyX (http://www.lyx.org/WebEs.Home)] \hfill \\
+			Si aún persisten las dudas de probar LaTeX por pánico al código, \LyX es la solución. Su filosofía es la de ser un editor WYSIWYM (ojo, no es WYSIWYG) y por tanto es muy amigable a tal punto de encargarse del código liberando al usuario de tal responsabilidad. Gana adeptos con la misma rapidez en que crece su desarrollo. Es muy potente y definitivamente el más fácil de usar.
+			
+			La mayoría de los editores anteriormente citados están en la base de datos de las distribuciones más populares.
+			Para los propósitos de esta guía usaremos \TeX maker\ y \LyX.
+			¿Cómo los instalamos? Pues bien, en el centro de software de la distro del caso, o si no, en la página oficial respectiva se encuentran las instrucciones.
+		\end{description}
+		
+	\section{SOLUCIONES EN LÍNEA}
+		Para empezar, sin necesidad de instalar nada, puede utilizar un servicio alojado en la web que ofrece una distribución completa de \TeX y \LaTeX un editor web.
+		
+		\begin{description}
+			\item[\href{https://www.sharelatex.com/}{ShareLaTeX}]  \hfill \\
+			Es un editor de \LaTeX\ basado en la nube de seguridad ofreciendo proyecto libre ilimitada. Las cuentas premium están disponibles para las características adicionales, tales como el control de versiones y la integración de Dropbox.
+			\item[\href{https://www.sharelatex.com/}{writeLaTeX}]  \hfill \\
+			WriteLaTeX es un servicio gratuito que te permite crear, editar y compartir sus ideas científicas fácilmente en línea usando \LaTeX , una herramienta completa y potente para la escritura científica .
+		\end{description}
+		
+		
+		
+		
+		
+		
+		

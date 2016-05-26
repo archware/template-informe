@@ -1,0 +1,102 @@
+\chapter{\TeX, \LaTeX \ y \LaTeXe}
+	
+	\section{\TeX}
+		
+		\TeX \ (escrito así, las consonantes en mayúsculas y la vocal en minúscula) está considerado el más potente programa formateador para producir libros científicos o técnicos de calidad profesional. Fue desarrollado por Donald E. Knuth y el nombre \TeX \ procede de la palabra griega ``$ \tau\varepsilon\chi $'' que es la raíz de palabras españolas (e inglesas) tales como ``técnica'' o ``tecnología'', aunque los griegos la usaban también como raíz de ``techné'', arte. Por ello dice el autor de \TeX \ que escogió ese nombre para poner el énfasis en el arte y en la tecnología; es decir: \TeX \ no se conforma con obtener documentos pasables sino que busca la más alta calidad posible (la más artística) en documentos relativos a la técnica y a la tecnología. Por tanto la ``x'' final de \TeX \ no es una ``x'', sino el carácter griego $ \chi $, que en español se pronuncia como la jota; de ahí que \TeX \ se pronuncie ``tej'' o, si se prefiere, ``tek''. Algo que no debería sorprender a los hispanoparlantes, que ya en el siglo XVI usaban “x” para representar el sonido ``j'' en palabras como ``México'' o ``texas''.
+		
+		\TeX \ está diseñado a modo de compilador que recibe como entrada un fichero de texto en el que junto con el texto propiamente dicho hay unas “marcas” o “instrucciones” de formateado. A partir de ese documento \TeX generará un nuevo documento ya formateado, en el que al texto se le habrán aplicado esas instrucciones. Por ello pronto empezó a hablarse de ``\TeX'' no solo en el sentido de un programa informático, sino también en el sentido de un lenguaje de marcado para el formateo de textos, para hacer referencia a las instrucciones de formateo que \TeX \ era capaz de reconocer.
+		
+		\TeX \ es, por otra parte, relativamente difícil. Consta de unas 300 instrucciones básicas llamadas primitivas que, como su propio nombre indica, son bastante primitivas. Por ello el propio autor de \TeX, utilizando una de las capacidades de \TeX que mayor potencia le dan, la de generar nuevas instrucciones (llamadas macros), escribió en torno a 600 de esas macros, dando lugar así a lo que se suele denominar Plain \TeX, que es un dialecto de \TeX \ que consta de aproximadamente 900 instrucciones. Habitualmente se identifica Plain \TeX \ con el propio \TeX, hasta el punto de que quienes dicen trabajar directamente en \TeX, en realidad casi siempre se refieren a Plain \TeX.
+		
+		Las instrucciones de que consta Plain \TeX, por otra parte, son en un muy alto porcentaje de naturaleza tipográfica: es decir indican directamente cómo hay que formatear el texto. Lo que significa que si el autor del documento no sabe nada de tipografía, por muy bueno que sea \TeX, el resultado que se obtendrá muy probablemente sea mediocre, ya que las decisiones tipográficas habrán sido tomadas por quien no entiende de ello.
+		
+		Pero, aunque mediocre, muy posiblemente sea mejor que el que se habría obtenido de no usar \TeX, porque el autor de \TeX\ mientras lo generaba, estudió concienzudamente las mejores tradiciones tipográficas, y diseñó sus propias fuentes, y preparó al programa para enfrentarse a todas las tareas y decisiones que suelen tomar los tipógrafos. Así \TeX\ se diferencia de los demás sistemas informáticos de tratamiento de texto en cientos de pequeños detalles, como, por ejemplo, la distancia entre las letras de una palabra, que siempre es igual en el tratamiento informático de los textos, salvo en \TeX\ donde, de acuerdo con la tradición tipográfica, ciertas combinaciones de letras producen un aumento o reducción del espacio entre las letras, o a veces producen las llamadas ligaduras tipográficas en virtud de las cuales dos caracteres consecutivos se convierten en uno sólo, o en el espacio de separación entre palabras de un párrafo, que en \TeX, a diferencia de lo que es normal en los sistemas de tratamiento automatizado de textos, no difieren entre las distintas líneas, ni siquiera para conseguir el llamado texto justificado en el que todas las líneas tienen la misma longitud.
+		
+	\section{\LaTeX}
+		
+		La capacidad de \TeX\ para escribir macros, de la que antes se ha hablado, hacía relativamente sencillo generar dialectos de \TeX\ a partir del propio \TeX. Ya hemos visto que el propio autor de \TeX\ generó un dialecto, llamado Plain \TeX\ que aunque es más sencillo de usar que el propio \TeX\, sigue ofreciendo bastante dificultad y, sobre todo, tiene el inconveniente de que gran parte de las decisiones de carácter tipográfico se siguen dejando en manos del autor del documento.
+		
+		\LaTeX\ es uno de los dialectos derivados de \TeX\, lo que significa que, desde el punto de vista interno, \LaTeX\ no es sino un conjunto de macros para \TeX. Fue diseñado originariamente en 1985 por Leslie Lamport con la intención de simplificar el uso de \TeX\ sin renunciar al uso de su gran calidad. Consiste en un conjunto de macros de alto nivel dirigidas a la producción de documentos técnicos, con una alta calidad tipográfica. En este sentido \LaTeX\ en gran medida sustituye las instrucciones tipográficas de \TeX\ por instrucciones lógicas en las que el autor en lugar de indicar él cómo quiere formatear el documento, se limita a ir señalando qué función cumple cada una de las partes del documento, de modo que sea el propio \LaTeX\ el que, a la vista de la función, seleccione el formato más adecuado, para lo que se tendrán en cuenta consideraciones de índole tipográfica de las que posiblemente el autor del documento no entienda.
+		
+		En suma: \LaTeX\ oculta al usuario la complejidad de \TeX\, al tiempo que le permite concentrarse en el contenido del documento, garantizando que el resultado final tendrá una alta calidad tipográfica.
+		
+		Como al usar \LaTeX\ se usa también \TeX, el autor puede cambiar cualquiera de los aspectos formales del documento. Pero en la filosofía de \LaTeX\ está el que no haga eso, sino que se concentre en escribir documentos bien estructurados, dejando las decisiones estilísticas en manos del propio \LaTeX.
+		
+		\LaTeX\ es, por ello, en mayor medida que \TeX\ un lenguaje de marcado lógico o descriptivo: las instrucciones no se concentran tanto en decir qué recurso tipográfico hay que usar, como en indicar qué efecto se pretende conseguir o qué función cumple cierto bloque de texto en el total, para que el texto sea formateado según dicha función o según el efecto que se quería obtener.
+		
+		Pero \LaTeX\ no es en su totalidad un marcado lógico (como lo puede ser XML). Junto con las instrucciones lógicas conviven algunas de naturaleza tipográfica; sobre todo las que podríamos considerar más habituales (negrita, cursiva…) y además, por supuesto, en \LaTeX\ siempre podemos usar cualquier instrucción de \TeX, aunque es cierto que en los manuales de \LaTeX\ no suelen documentarse aquellas funciones de \TeX\ que, aunque se pueden usar, no ha sido previsto que se utilicen.
+		
+	\section{\LaTeXe}
+		
+		Como es normal en materia de software, desde su introducción a mediados de los años 80, \LaTeX\ ha venido sufriendo revisiones periódicas. Durante mucho tiempo se mantuvo como versión vigente la versión 2.09, a partir de la cual podría decirse que \LaTeX\ hizo eclosión. Su enorme popularidad le llevó a ir expandiéndose en campos diferentes, para los que no había sido pensado, y a ir dando lugar a múltiples formatos derivados, hasta que en en un esfuerzo para restablecer un verdadero estándar, se creó el Proyecto \LaTeX3, con la finalidad de construir un conjunto básico de comandos eficientes y optimizados, complementados con varios paquetes que añadieran tantas funcionalidades específicas como fuera preciso.
+		
+		A esa versión que el Proyecto \LaTeX3\ considera que será la versión definitiva, se la llama \LaTeX 3, y se sigue trabajando en ella. Pero hasta que se obtenga, desde 1994, la versión oficial es la denominada \LaTeXe, que es la que se suele explicar en la documentación sobre \LaTeX\ accesible desde Internet.
+		
+		En la actualidad se considera que \LaTeX 2.09\ es obsoleta, y el estándar está constituido por \LaTeXe, que es el que se explicará en este curso.
+		
+	\section*{CONDICIONES RELATIVAS A \TeX}
+		
+		\subsection*{SISTEMAS DE PREPARACIÓN DE DOCUMENTOS}
+		
+		\LaTeX\ es un sistema de preparación de documentos basado en TeX. Así que el sistema es la combinación de la lengua y las macros.
+		
+		\subsection*{DISTRIBUCIONES}
+		
+		Distribuciones de \TeX\ son conjuntos de paquetes y programas (compiladores, las fuentes y los paquetes de macros) que le permiten componer sin tener a buscar manualmente archivos y configurar cosas.
+		
+		\subsection*{MOTORES}
+		
+		Un motor es un archivo ejecutable que puede convertir su código fuente en un formato de salida para imprimir. El motor por sí solo maneja la sintaxis, sino que también tiene que cargar fuentes y macros para entender completamente el código fuente y generar una salida adecuada. El motor va a determinar qué tipo de código fuente se puede leer, y qué formato se puede dar salida (normalmente DVI o PDF).
+		
+		Con todo, las distribuciones son una manera fácil de instalar lo que es necesario utilizar los motores y los sistemas que desea. Distribuciones suelen dedicarse a sistemas operativos específicos. Se pueden utilizar diferentes sistemas en los diferentes motores, pero a veces hay restricciones. El código escrito para \TeX, \LaTeX\ o contexto son (en su mayoría) no es compatible. Además, el código específico del motor (como fuente para \XeTeX) no puede ser compilada por cada motor.
+		
+		Durante la búsqueda de información sobre \LaTeX, también puede tropezar con \XeTeX , \ConTeXt , \LuaTeX\ o cualquier otro nombre con un sufijo -Tex. Recapitulemos la mayor parte de los términos de esta tabla.
+		
+		
+		
+		\resizebox{\linewidth}{!}{
+		\begin{tabular}{|l|p{28em}|}
+			\hline
+			\multicolumn{1}{|c|}{\textbf{Sistema}}  & \multicolumn{1}{c|}{\textbf{Descripción}} \\
+			\hline
+			\multicolumn{1}{|m{6em}|}{\raggedright \ConTeXt}  &  \multicolumn{1}{m{30em}|}{\raggedright Un sistema de preparación de documentos basado en \TeX\ (como el látex es) con una sintaxis y un apoyo muy consistente y fácil para los motores de pdfTeX, \XeTeX y \LuaTeX.\\ No tiene el mismo objetivo que \LaTeX\ sin embargo.} \tabularnewline
+			\hline
+			\multicolumn{1}{|l|}{\LaTeX} & \multicolumn{1}{m{30em}|}{\raggedright Un sistema de preparación de documentos basado en TeX diseñada por Leslie Lamport. En realidad, es un conjunto de macros para \TeX. Su objetivo es cuidar el proceso de formateo.} \\
+			\hline
+			\multicolumn{1}{|l|}{\MF}   & \multicolumn{1}{m{30em}|}{\raggedright Un sistema de fuentes de alta calidad diseñado por Donald Knuth basado en \TeX.} \\
+			\hline
+			\MP   & Un lenguaje de gráficos vectoriales descriptivo basado en \MF. \\
+			\hline
+			\TeX  & El idioma original diseñado por Donald Knuth. \\
+			\hline
+		\end{tabular}}
+		
+		
+		\resizebox{\linewidth}{!}{
+		\begin{tabular}{|l|p{28em}|}
+			\hline
+			\multicolumn{1}{|c|}{\textbf{Motores}}  & \multicolumn{1}{c|}{\textbf{Descripción}} \\
+			\hline
+			\multicolumn{1}{|m{8em}|}{\raggedright \LuaTeX, lualatex}  &  \multicolumn{1}{m{28em}|}{\raggedright Un motor de \TeX\ con motor de scripting encajada de Lua el objetivo de hacer más flexible \TeX} \tabularnewline
+			\hline
+			pdftex, pdflatex   & 	Los motores (compiladores PDF). \\
+			\hline
+			TeX , LaTeX  & Los motores (compiladores DVI). \\
+			\hline
+			\multicolumn{1}{|l|}{\XeTeX , \XeLaTeX} & \multicolumn{1}{m{28em}|}{\raggedright Un motor de \TeX, que utiliza Unicode y apoya ampliamente populares .ttf y .otf fuentes.} \\
+			\hline
+		\end{tabular}}
+		
+		
+		\resizebox{\linewidth}{!}{
+		\begin{tabular}{|l|p{28em}|}
+			\hline
+			\multicolumn{1}{|c|}{\textbf{Las distribuciones de \TeX}} & \multicolumn{1}{c|}{\textbf{Descripción}} \\
+			\hline
+			Mac\TeX                                & Una distribución basada en TeX Live que apuntan a Mac OS X.           \\
+			\hline
+			\MikTeX                                & Una distribución TeX para Windows.          \\
+			\hline
+			\TeXLive                               & Una distribución TeX multiplataforma.           \\
+			\hline
+		\end{tabular}}

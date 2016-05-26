@@ -1,0 +1,36 @@
+% !TeX spellcheck = es_ES
+% !TeX encoding = UTF-8
+\documentclass[12pt,a4paper,twoside]{report} % Documento de clase book a dos caras  article
+\input{./style/pakages}
+\input{./style/tocandsec}
+% style text
+\parindent = 0em
+\headheight 0cm 
+%\renewcommand{\baselinestretch}{1.1}
+\setlength{\parskip}{.8\baselineskip plus2pt minus2pt}
+%\setlength{\parskip}{\baselineskip} 
+%\setlength{\parskip}{2ex}
+% style list
+\newlength{\wideitemsep}
+\setlength{\wideitemsep}{.5\itemsep}
+\addtolength{\wideitemsep}{0pt}
+\let\olditem\item
+\renewcommand{\item}{\setlength{\itemsep}{\wideitemsep}\olditem}
+
+
+\input{./style/rename}
+%\pagestyle{empty}
+\begin{document}
+	\pagenumbering{Roman}
+	\input{./content/titlepage}
+	\tableofcontents
+	\input{./content/introduccion}
+	\input{./content/cap1}
+	\input{./content/cap2}
+%	\input{./content/cap3}
+%	\input{./content/cap3}
+	
+	\pagenumbering{arabic}
+	\input{./bibli/bibliografia}
+	
+\end{document}

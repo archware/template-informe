@@ -1,0 +1,33 @@
+\titlecontents{chapter}% <section-type>
+[0em]% <left>
+{\addvspace{\baselineskip}}% <above-code>
+{\bfseries\chaptername\ \thecontentslabel :\quad}% <numbered-entry-format>
+{}% <numberless-entry-format>
+{\ \bfseries \titlerule*[9pt]{.}\contentspage}% <filler-page-format>\pagebreak
+[\addvspace{3pt}]
+
+\titleformat{\chapter}[display]
+{\color{black}}%
+{\flushright\large\color{black!70}%
+\MakeUppercase{\chaptertitlename}\hspace{1ex}%
+{\fontfamily{pbk}\fontsize{90}{90}\selectfont\thechapter}}%
+{5pt}%
+{\bfseries\Large}%
+%[\newpage]
+
+\titleformat{\section}
+{\normalfont\normalsize\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\normalsize\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+\renewcommand \thepart{\arabic{part}}
+\renewcommand \thechapter{\Roman{chapter}}
+\renewcommand \thesection{\arabic{chapter}.\arabic{section}}
+\renewcommand \thesubsection{\thesection.\arabic{subsection}}
+\renewcommand \thesubsubsection{\thesubsection.\arabic{subsubsection}}
